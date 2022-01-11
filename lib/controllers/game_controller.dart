@@ -37,7 +37,13 @@ abstract class GameControllerBase with Store {
   @computed
   bool get jogadaCompleta => (_escolha.length == 2);
 
-  GameControllerBase({required this.recordesRepository});
+  GameControllerBase({required this.recordesRepository}) {
+    reaction((_) => venceu == true, (bool ganhou) {
+      if (ganhou) {
+        recordesRepository.updateRecordes(gamePlay: _gamePlay, score: score);
+      }
+    });
+  }
 
   startGame({required GamePlay gamePlay}) {
     _gamePlay = gamePlay;
