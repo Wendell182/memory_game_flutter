@@ -37,7 +37,7 @@ class RecordesPage extends StatelessWidget {
     if (widgets.isEmpty) {
       widgets.add(
         const Center(
-          child: Text('AINDA NÃO RECORDES!'),
+          child: Text('AINDA NÃO HÁ RECORDES!'),
         ),
       );
     }

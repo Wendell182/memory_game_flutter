@@ -17,6 +17,7 @@ class GameScore extends StatelessWidget {
       children: [
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Icon(modo == Modo.round6
                 ? Icons.my_location
@@ -34,7 +35,7 @@ class GameScore extends StatelessWidget {
         ),
         Image.asset(
           'images/host.png',
-          width: 387.0,
+          width: 37.0,
           height: 60.0,
         ),
         TextButton(

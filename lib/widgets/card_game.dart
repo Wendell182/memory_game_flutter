@@ -41,7 +41,7 @@ class _CardGameState extends State<CardGame>
   }
 
   flipCard() {
-    final game = context.read()<GameController>();
+    final game = context.read<GameController>();
     if (!animation.isAnimating &&
         !widget.gameOpcao.matched &&
         !widget.gameOpcao.selected &&
